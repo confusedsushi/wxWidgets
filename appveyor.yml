@@ -66,6 +66,8 @@ before_build:
       sc include\wx\msw\setup.h
     }
 
-build_script: c:\projects\wxwidgets\build\tools\appveyor.bat
+build_script:
+- echo %CWD%
+- c:\projects\wxwidgets\build\tools\appveyor.bat
 
 test_script: c:\projects\wxwidgets\build\tools\appveyor-test.bat
