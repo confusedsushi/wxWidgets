@@ -67,7 +67,7 @@ before_build:
     }
 
 build_script:
-- echo %CWD%
+- dir
 - c:\projects\wxwidgets\build\tools\appveyor.bat
 
 test_script: c:\projects\wxwidgets\build\tools\appveyor-test.bat
