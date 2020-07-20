@@ -1,3 +1,11 @@
+echo ---
+set
+echo ---
+dir "C:\Program Files\"
+echo ---
+dir "C:\Program Files\AppVeyor\BuildAgent\"
+echo ---
+
 set MSBUILD_LOGGER=/logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 goto %TOOLSET%
 
