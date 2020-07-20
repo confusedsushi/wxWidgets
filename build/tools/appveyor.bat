@@ -8,7 +8,6 @@ echo ---
 
 call "%VS140COMNTOOLS%\VsDevCmd.bat"
 
-set MSBUILD_LOGGER=/logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 goto %TOOLSET%
 
 :msbuild
