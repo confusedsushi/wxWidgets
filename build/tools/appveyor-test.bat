@@ -2,12 +2,12 @@ echo.
 echo --- Running tests.
 echo.
 
-cd c:\projects\wxwidgets\tests
+cd %APPVEYOR_BUILD_FOLDER%\tests
 
 goto %TOOLSET%
 
 :msbuild
-PATH=C:\projects\wxwidgets\lib\vc_x64_dll;%PATH%
+PATH=%APPVEYOR_BUILD_FOLDER%\lib\vc_x64_dll;%PATH%
 .\vc_x64_mswudll\test.exe
 if %errorlevel% NEQ 0 goto :error
 .\vc_x64_mswudll\test_gui.exe
@@ -28,14 +28,14 @@ if %errorlevel% NEQ 0 goto :error
 goto :eof
 
 :msys2
-PATH=C:\projects\wxwidgets\lib;%PATH%
+PATH=%APPVEYOR_BUILD_FOLDER%\lib;%PATH%
 .\test.exe
 if %errorlevel% NEQ 0 goto :error
 .\test_gui.exe
 goto :eof
 
 :cygwin
-PATH=C:\projects\wxwidgets\lib;%PATH%
+PATH=%APPVEYOR_BUILD_FOLDER%\lib;%PATH%
 .\test.exe
 .\test_gui.exe
 echo.
