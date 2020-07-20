@@ -68,6 +68,6 @@ before_build:
 
 build_script:
   - echo %APPVEYOR_BUILD_FOLDER%
-  - %APPVEYOR_BUILD_FOLDER%\build\tools\appveyor.bat
+  - call %APPVEYOR_BUILD_FOLDER%\build\tools\appveyor.bat
 
 test_script: build\tools\appveyor-test.bat
