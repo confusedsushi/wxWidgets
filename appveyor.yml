@@ -66,8 +66,6 @@ before_build:
       sc include\wx\msw\setup.h
     }
 
-build_script:
-  - echo %APPVEYOR_BUILD_FOLDER%
-  - call %APPVEYOR_BUILD_FOLDER%\build\tools\appveyor.bat
+build_script: call %APPVEYOR_BUILD_FOLDER%\build\tools\appveyor.bat
 
-test_script: build\tools\appveyor-test.bat
+test_script: call %APPVEYOR_BUILD_FOLDER%\build\tools\appveyor-test.bat
