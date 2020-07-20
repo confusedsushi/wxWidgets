@@ -68,6 +68,6 @@ before_build:
 
 build_script:
 - dir
-- c:\projects\wxwidgets\build\tools\appveyor.bat
+- $env:APPVEYOR_BUILD_FOLDER\build\tools\appveyor.bat
 
-test_script: c:\projects\wxwidgets\build\tools\appveyor-test.bat
+test_script: $env:APPVEYOR_BUILD_FOLDER\build\tools\appveyor-test.bat
